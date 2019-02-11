@@ -36,5 +36,4 @@ public class CDPlayerTest {
     mediaPlayer.play();
     assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band" + " by The Beatles\r\n", systemOutRule.getLog());
   }
-
 }
