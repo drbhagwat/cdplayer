@@ -3,7 +3,6 @@ package com.drbhagwat.automaticconfiguration.soundsystem;
 import javax.inject.Named;
 
 import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.stereotype.Component;
 
 @Named("lonelyHeartsClub")
 public class SgtPeppers implements CompactDisc, BeanNameAware {

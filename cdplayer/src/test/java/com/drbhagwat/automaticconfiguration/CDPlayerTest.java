@@ -1,9 +1,8 @@
-package com.drbhagwat.cdplayer;
+package com.drbhagwat.automaticconfiguration;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import javax.inject.Inject;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -13,33 +12,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.drbhagwat.javaconfiguration.soundsystem.CDPlayerConfig;
-import com.drbhagwat.javaconfiguration.soundsystem.CompactDisc;
-import com.drbhagwat.javaconfiguration.soundsystem.MediaPlayer;
+import com.drbhagwat.automaticconfiguration.soundsystem.CDPlayerConfig;
+import com.drbhagwat.automaticconfiguration.soundsystem.CompactDisc;
+import com.drbhagwat.automaticconfiguration.soundsystem.MediaPlayer;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=CDPlayerConfig.class)
+@ContextConfiguration(classes = CDPlayerConfig.class)
 public class CDPlayerTest {
-  
+
   @Rule
   public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
-  
-  @Inject
+  @Autowired
   private CompactDisc cd;
-  
+
   @Autowired
   private MediaPlayer mediaPlayer;
 
-  @Test
-  public void cdShouldNotBeNull(){
-	assertNotNull(cd);
-  }
+  /*
+   * @Test public void cdShouldNotBeNull() { assertNotNull(cd); }
+   */
 
   @Test
-  public void play(){
-	mediaPlayer.play();
-	assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band"+ " by The Beatles\r\n", systemOutRule.getLog());
+  public void play() {
+    mediaPlayer.play();
+    System.out.println(systemOutRule.getLog());
+    assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band" + " by The Beatles\r\n", systemOutRule.getLog());
   }
 }

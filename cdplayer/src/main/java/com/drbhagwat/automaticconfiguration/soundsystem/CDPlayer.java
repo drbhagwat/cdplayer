@@ -5,24 +5,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CDPlayer implements MediaPlayer {
-  @Autowired
   private CompactDisc cd;
-  
+
+  @Autowired
   public CDPlayer(CompactDisc cd) {
-	this.cd = cd;
-  }  
-
-  public CompactDisc getCd() {
-    return cd;
-  }
-
-  public void setCd(CompactDisc cd) {
     this.cd = cd;
   }
 
-
   @Override
   public void play() {
-	cd.play();
+    cd.play();
   }
 }
