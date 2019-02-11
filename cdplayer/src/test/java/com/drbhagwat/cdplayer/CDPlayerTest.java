@@ -13,9 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.drbhagwat.soundsystem.CDPlayerConfig;
-import com.drbhagwat.soundsystem.CompactDisc;
-import com.drbhagwat.soundsystem.MediaPlayer;
+import com.drbhagwat.javaconfiguration.soundsystem.CDPlayerConfig;
+import com.drbhagwat.javaconfiguration.soundsystem.CompactDisc;
+import com.drbhagwat.javaconfiguration.soundsystem.MediaPlayer;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)

@@ -1,4 +1,4 @@
-package com.drbhagwat.soundsystem;
+package com.drbhagwat.automaticconfiguration.soundsystem;
 
 import javax.inject.Named;
 
