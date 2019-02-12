@@ -1,6 +1,6 @@
 package com.drbhagwat.xmlconfiguration.soundsystem;
 
-import com.drbhagwat.javaconfiguration.soundsystem.CompactDisc;
+import com.drbhagwat.xmlconfiguration.soundsystem.CompactDisc;
 
 public class CDPlayer implements MediaPlayer {
   private CompactDisc cd;
